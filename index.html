@@ -36,14 +36,37 @@
 </head>
 <body>
 	<div class="video-container">
-		<iframe src="https://player.vimeo.com/video/732645111?controls=false"></iframe>
+		<iframe src="https://player.vimeo.com/video/817309660"></iframe>
 
 	</div>
 
 <script src="https://player.vimeo.com/api/player.js"></script>
 <script>
-  var player = new Vimeo.Player('iframe');
-  player.play();
+  // Define o ID do vídeo
+  var videoId = '817309660';
+  
+  // Verifica se o cookie "videoPlayed" existe e se o período de 24 horas já passou
+  var videoPlayed = localStorage.getItem('videoPlayed') || false;
+  if (!videoPlayed || (new Date().getTime() - videoPlayed) > 86400000) { // 86400000 = 24 horas em milissegundos
+
+    // Cria uma nova instância do player de vídeo do Vimeo
+    var player = new Vimeo.Player('iframe');
+
+    // Obtém o tempo de reprodução atual do vídeo
+    player.getCurrentTime().then(function(seconds) {
+
+      // Armazena o tempo de reprodução atual do vídeo em localStorage
+      localStorage.setItem('videoTime-' + videoId, seconds);
+
+      // Inicia a reprodução do vídeo a partir do tempo armazenado
+      player.setCurrentTime(localStorage.getItem('videoTime-' + videoId)).then(function() {
+        player.play();
+      });
+
+      // Armazena a hora em que o vídeo foi reproduzido pela última vez em localStorage
+      localStorage.setItem('videoPlayed', new Date().getTime());
+    });
+  }
 </script>
 
 
