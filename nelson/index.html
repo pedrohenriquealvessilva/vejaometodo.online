@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Live Stream</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: black;
+		}
+		.video-container {
+			position: relative;
+			padding-top: 56.25%; /* Proporção 16:9 */
+		}
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.logo-container {
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			background-color: red;
+			padding: 10px;
+			border-radius: 5px;
+			font-size: 2em;
+			color: white;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="video-container">
+		<iframe src="https://player.vimeo.com/video/817309660"></iframe>
+
+	</div>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+  // Define o ID do vídeo
+  var videoId = '817309660';
+  
+  // Verifica se o cookie "videoPlayed" existe e se o período de 24 horas já passou
+  var videoPlayed = localStorage.getItem('videoPlayed') || false;
+  if (!videoPlayed || (new Date().getTime() - videoPlayed) > 86400000) { // 86400000 = 24 horas em milissegundos
+
+    // Cria uma nova instância do player de vídeo do Vimeo
+    var player = new Vimeo.Player('iframe');
+
+    // Obtém o tempo de reprodução atual do vídeo
+    player.getCurrentTime().then(function(seconds) {
+
+      // Armazena o tempo de reprodução atual do vídeo em localStorage
+      localStorage.setItem('videoTime-' + videoId, seconds);
+
+      // Inicia a reprodução do vídeo a partir do tempo armazenado
+      player.setCurrentTime(localStorage.getItem('videoTime-' + videoId)).then(function() {
+        player.play();
+      });
+
+      // Armazena a hora em que o vídeo foi reproduzido pela última vez em localStorage
+      localStorage.setItem('videoPlayed', new Date().getTime());
+    });
+  }
+</script>
+
+
+	<div class="logo-container">
+		<span>Ao Vivo</span>
+	</div>
+</body>
+</html>
