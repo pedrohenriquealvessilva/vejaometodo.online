@@ -1,77 +1,324 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-	<title>Live Stream</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			background-color: black;
-		}
-		.video-container {
-			position: relative;
-			padding-top: 56.25%; /* Proporção 16:9 */
-		}
-		iframe {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-		}
-		.logo-container {
-			position: absolute;
-			bottom: 10px;
-			left: 50%;
-			transform: translateX(-50%);
-			background-color: red;
-			padding: 10px;
-			border-radius: 5px;
-			font-size: 2em;
-			color: white;
-			font-weight: bold;
-		}
-	</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>BUG DO MINES</title>
+<link rel="shortcut icon" href="./files/favicon.ico">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Cabin&family=Montserrat&family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=553345633297447&ev=PageView&noscript=1"
+/></noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GF284XY72P"></script>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-GF284XY72P');
+    </script>
+<style type="text/css">
+      header {
+        color: white;
+        background-image: url("assets/img/bg.jpg");
+        background-color: rgba(0, 0, 0, 0.6);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-blend-mode: darken;
+      }
+    </style>
 </head>
 <body>
-	<div class="video-container">
-		<iframe src="https://player.vimeo.com/video/817309660"></iframe>
-
-	</div>
-
-<script src="https://player.vimeo.com/api/player.js"></script>
-<script>
-  // Define o ID do vídeo
-  var videoId = '817309660';
-  
-  // Verifica se o cookie "videoPlayed" existe e se o período de 24 horas já passou
-  var videoPlayed = localStorage.getItem('videoPlayed') || false;
-  if (!videoPlayed || (new Date().getTime() - videoPlayed) > 86400000) { // 86400000 = 24 horas em milissegundos
-
-    // Cria uma nova instância do player de vídeo do Vimeo
-    var player = new Vimeo.Player('iframe');
-
-    // Obtém o tempo de reprodução atual do vídeo
-    player.getCurrentTime().then(function(seconds) {
-
-      // Armazena o tempo de reprodução atual do vídeo em localStorage
-      localStorage.setItem('videoTime-' + videoId, seconds);
-
-      // Inicia a reprodução do vídeo a partir do tempo armazenado
-      player.setCurrentTime(localStorage.getItem('videoTime-' + videoId)).then(function() {
-        player.play();
-      });
-
-      // Armazena a hora em que o vídeo foi reproduzido pela última vez em localStorage
-      localStorage.setItem('videoPlayed', new Date().getTime());
-    });
-  }
 </script>
+</head>
+<body>
+<style>
+.zMkYDH2912119 {display: none}
+html {overflow-x:hidden}
+</style>
+<style>.zooming { animation: zooming 1.25s ease infinite; } @keyframes zooming { 0% { transform: scale(1, 1); } 50% { transform: scale(1.1, 1.1); } 100% { transform: scale(1, 1); } }</style>
+<style>.px-1{padding-left:4px;padding-right:4px}.pt-0.5{padding-top:2px}.mt-4{margin-top:16px}@media (min-width:640px){.sm\:text-sm{font-size:14px;line-height:20px}}.mt-2{margin-top:8px}.mb-2{margin-bottom:8px}.flex{display:flex}.w-full{width:100%}.space-x-1>:not([hidden])~:not([hidden]){margin-left:.25rem}.items-center{align-items:center}.font-\[Helvetica\]{font-family:Helvetica,Arial,sans-serif}.cursor-pointer{cursor:pointer}.rounded-full{border-radius:99999px}.h-12{height:48px}.w-12{width:48px}.flex-col{flex-direction:column}.py-1{padding-top:4px;padding-bottom:4px}.px-3{padding-left:12px;padding-right:12px}.pl-0\.5,.px-0\.5{padding-left:2px}.rounded-\[18px\]{border-radius:18px}.bg-stone-100{background-color:#f5f5f4}.px-0\.5{padding-right:2px}.font-semibold{font-weight:600}.text-\[\#365899\]{color:#365899}.text-\[13px\]{font-size:13px}.leading-4{line-height:16px}.hover\:underline:hover{text-decoration-line:underline}.text-sm{font-size:14px}.relative{position:relative}.justify-between{justify-content:space-between}.grow{flex-grow:1}.text-xs{font-size:12px}.text-\[\#90949c\]{color:#90949c}.ml-px{margin-left:1px}.gap-1{gap:4px}.w-fit{width:fit-content}.hidden{display:none}.-mt-1{margin-top:-4px}.-mt-2{margin-top:-8px}.mr-2{margin-right:8px}.h-4,.h-5{height:16px}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 1px rgba(0, 0, 0, 0.06));filter:var(--tw-drop-shadow)}.bg-slate-50{background-color:#f8fafc}.py-0\.5{padding-top:2px;padding-bottom:2px}.pr-1{padding-right:4px}.block{display:block}.w-4{width:16px}.z-10{z-index:10}.-ml-1{margin-left:-4px}.ml-4{margin-left:16px}.gap-x-0\.5{column-gap:2px}.mr-0\.5{margin-right:2px;margin-left:2px}.border-l{border-left-width:1px}.border-slate-300{border-color:#cbd5e1}.border-dotted{border-style:dotted}.ml-5{margin-left:20px}.h-8{height:32px}.w-8{width:32px}.h-10{height:40px}.w-10{width:40px}@media (min-width:640px){.sm\:w-16{width:64px}.sm\:ml-12{margin-left:48px}}.pl-2{padding-left:8px}</style>
+<div class="division-1657813287709__wrapper">
+<style>
+#division-1657813287709 {
+position: relative;
+padding: 2vh 20vw 2vh 20vw;
+background-color: #ff0000;
+}
+@media (max-width:1200px) {
+#division-1657813287709 {
+padding: 1vh 10vw 1vh 10vw;
+}
+}
+@media (max-width:600px) {
+#division-1657813287709 {
+padding: 0.75vh 1.5vw 0.75vh 1.5vw;
+}
+}
+</style>
+<div id="division-1657813287709" class="AWtPQv2903404">
+<div class="text-16578133316969nqkcl">
+<style>
+.text-16578133316969nqkcl-element p {
+font-size: 1.32vw;
+text-align: center;
+margin-top: 1vh;
+margin-bottom: 1vh;
+color: #ffffff;
+line-height: 1.1;
+font-weight: 400;
+}
+@media (max-width: 1200px) {
+.text-16578133316969nqkcl-element p {
+font-size: 2.20vw;
+margin-top: 0.75vh;
+margin-bottom: 0.75vh;
+}
+}
+@media (max-width: 640px) {
+.text-16578133316969nqkcl-element p {
+font-size: 4.00vw;
+text-align: center;
+}
+}
+</style>
+<div class="text-16578133316969nqkcl-element text">
+<p>
+<span style="color: #F2F2F2"><b><span class="sm">Você e mais 263 pessoas de <span id="address" style="color:#F4FA58;">São Paulo</span> estão ASSISTINDO esse vídeo agora!</span></b></span>&nbsp;<b><span class="lg"></span>&nbsp;</b>
+</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>$.get("https://ipinfo.io/json", function (response) { $("#address").html(response.city);
+}, "jsonp");
+</script>
+</div>
+</div>
+</div>
+</div>
+<style>
+    header {
+      background: url("./files/headerbg2.png");
+      background-repeat: repeat;
+    }
+    h1 {
+      font-size: clamp(1.5em, 1em + 3vw, 2.5em);
+      text-transform: uppercase bold;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .a-btn {
+      text-decoration: none;
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      border: 0; 
+      font: inherit; 
+      vertical-align: baseline;
+      color: #2e82bc; 
+      outline: 0; 
+      line-height: 1; 
+      text-align: center; 
+      position:relative!important; display: inline-block!important;
+      border-style: solid; 
+      width: 100%; padding-left: 0!important; padding-right: 0!important; 
+      margin-bottom: 10px; 
+      padding: 22px 44px; border-color: #ff5535; border-width: 0px; 
+      border-radius: 6px; 
+      background: linear-gradient(to bottom, #ff6600 0%, #ff5535 100%); 
+      box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5); 
+      text-decoration: none!important;
+    }
+    .span-btn {
+      text-decoration: none;
+      -webkit-font-smoothing: antialiased; 
+      text-align: center;
+      margin: 0; 
+      border: 0; 
+      font: inherit;
+      vertical-align: baseline;
+      display: block; 
+      position: relative; 
+      z-index: 1; 
+      padding: 0 15px; 
+      white-space: normal; 
+      font-size: 25px;
+      color: #ffffff; 
+      font-family: Oswald; 
+      font-weight: bold; 
+      text-shadow: #000000 0px 1px 0px;
+      text-decoration: none;
+    }
+    .span-btn2 {
+      -webkit-font-smoothing: antialiased; 
+      text-align: center;
+      padding: 0; border: 0;
+      font: inherit; 
+      vertical-align: baseline; 
+      display: block; 
+      position: relative;
+      z-index: 1; 
+      margin: .2em 0 -.5em; 
+      font-size: 15px; 
+      color: #f5e051; 
+      font-family: Cabin; 
+      font-weight: bold; 
+      font-style: italic;
+      text-shadow: #000000 0px 1px 0px;
+    }
+    .comments {
+      background-color: #F6F7F9;
+    }
+    .comment {
+      display: block; 
+      padding: 10px 0; 
+      line-height: 20px;
+    }
+    .span {
+      color: #365899; 
+      font-weight: bold;
+    }
+    .answer {
+      color: #444; 
+      -webkit-font-smoothing: antialiased;
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      font: inherit; 
+      vertical-align: baseline; 
+      display: block; 
+      padding-top: 10px; 
+      line-height: 20px;
+      padding-left: 9px; 
+      border-left: 1px solid #E9EBEE; margin-left: 50px; padding-bottom: 0;
+    }
+    .classeNova {
+      color: #444; 
+      -webkit-font-smoothing: antialiased; 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      font: inherit; 
+      vertical-align: baseline;
+      font-family: Arial; 
+      background-color:
+      #F6F7F9;
+      font-size: 14px; 
+      padding-top: 20px;"      
+    }
+    .paragrafo {
+      color: #444; 
+      font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+      line-height: 1.5em; 
+      margin: 0;
+      margin-left: 60px; 
+      margin-bottom: 0px;
+    }
+    .like {
+      font-size: 11px; color: #90949c;
+    }
+    .twenty1 {
+      font-weight: 700; 
+      border-bottom: 1px solid #E9EBEE; 
+      display: block; 
+      padding-bottom: 6px;
+    }
+    .imgComment {
+      width: 60px; 
+      height: 50px; 
+      float: left; 
+      padding-right: 10px;
+    }
+    .hide {
+      display: none;
+    }
+    .pirataria h3 {
+      text-transform: uppercase;
+      font-size: 15px;
+      letter-spacing: 5px;
+    }
+    .pirataria b{
+      color: #FFC400;
+    }
+    .pirataria {
+      font-size: 12px;
+      text-align: justify;
+    }
+    footer {
+      background-color: black;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      color: white;
+    }
+    .cpy {
+      font-size: 12px;
+      margin: 37px 0px 20px 0px;
+    }
+    .links a {
+      font-size: 12px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<header class="py-3">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8 text-center">
+<img src="./files/ultrasecreto4.png" class="img-fluid my-3">
 
+<div id="vid_645675eeebb6dc000a1c6f3c" style="position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_645675eeebb6dc000a1c6f3c" src="https://images.converteai.net/9a9bde5a-35db-4df1-add9-630c15a6d98a/players/645675eeebb6dc000a1c6f3c/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_645675eeebb6dc000a1c6f3c" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_645675eeebb6dc000a1c6f3c">var s=document.createElement("script");s.src="https://scripts.converteai.net/9a9bde5a-35db-4df1-add9-630c15a6d98a/players/645675eeebb6dc000a1c6f3c/player.js",s.async=!0,document.head.appendChild(s);</script>
 
-	<div class="logo-container">
-		<span>Ao Vivo</span>
-	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+</section>
+<footer>
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-md-6 pirataria">
+<h3> Pirataria é <b>CRIME</b></h3>
+A venda do BUG DO MINES só pode ser realizada através deste site, registrado em nome de
+BUG DO MINES. Qualquer outro site onde você encontre este programa é uma
+FALSIFICAÇÃO e vai contra as leis. Evite falsificações e recuse conteúdos ilegais ou pirateados.
+NÃO adquira programas parecidos e que não são baseados em anos de estudo da psicologia
+comportamental. Não nos responsabilizamos por compras realizadas em outros sites.
+</div>
+<div class="col-xs-12 col-md-6">
+<div class="row cpy">
+<div class="col text-center">
+Copyright 2022 - BUG DO MINES ®<br>
+Todos os direitos reservados.
+</div>
+</div>
+<div class="row links">
+<div class="col text-center">
+<a href="https://flashbet.vip/termos" target="_blank">Termos de Uso</a>
+<a href="https://flashbet.vip/privacidade" target="_blank">Políticas de Privacidade</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row justify-content-center">
+<div class="col-md-12 text-center" style="font-size: 11px; padding: 40px 0px 20px 0px; color: #b7adad;">
+<b>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.</b> Depois que você sair do
+Facebook, a responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços para indicar
+claramente e mostrar todas as provas do produto e usamos resultados reais. Nós não vendemos o seu
+e-mail ou qualquer informação para terceiros. Jamais fazemos nenhum tipo de spam. Se você tiver
+alguma dúvida, sinta-se à vontade para usar o link de contato e falar conosco em horário comercial
+de Segunda a Sextas das 09h00 ás 18h00. Lemos e respondemos todas as mensagens por ordem de chegada.
+</div>
+</div>
+</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script language="JavaScript" src="https://ssl.geoplugin.net/javascript.gp?k=292af9fb00c1353d" type="text/javascript"></script>
 </body>
 </html>
